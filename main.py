@@ -14,7 +14,7 @@ def lamer(phrase):
     x = ""
     if done.endswith("!"):
         y = ["!", "1"]
-        for i in range(random.randint(3, 7)):
+        for i in range(random.randint(3, 15)):
             x += y[random.randint(0, 1)]
     return done + x
 
