@@ -19,6 +19,8 @@ def lamer(phrase):
     return done + x
 
 try:
-    lamer(sys.argv[1])
+    lamer = lamer(sys.argv[1])
 except:
-    lamer(input("text ->"))
+    lamer = lamer(input("text ->"))
+
+print(lamer)
