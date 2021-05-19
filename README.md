@@ -1,5 +1,5 @@
 # hAcKeR
-speaks like a  lamer
+speaks like a  ~~hacker~~ lamer
 
 > ### how to use the tool:
 > ```sh
