@@ -11,12 +11,13 @@ def lamer(phrase):
         else:
             up = False
         done += letter
-    x = ""
-    if done.endswith("!"):
+    x = "!"
+    if "!" in done:
+        x = ""
         y = ["!", "1"]
         for i in range(random.randint(3, 15)):
             x += y[random.randint(0, 1)]
-    return done + x
+    return done.replace("!", x)
 
 try:
     lamer = lamer(sys.argv[1])
