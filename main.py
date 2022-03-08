@@ -3,25 +3,22 @@ import random, sys
 
 def lamer(phrase):
     done = ""
-    up = False
     for letter in phrase:
-        if up == False:
-            up = True
-            letter = letter.upper()
+        if phrase.index(letter) % 2 == 1:
+        	done += letter.upper()
         else:
-            up = False
-        done += letter
+        	done += letter.lower()
     x = "!"
-    if "!" in done:
+    if x in done:
         x = ""
         y = ["!", "1"]
-        for i in range(random.randint(3, 15)):
+        for _ in range(random.randint(3, 15)):
             x += y[random.randint(0, 1)]
     return done.replace("!", x)
 
-try:
+if len(sys.argv) > 1:
     lamer = lamer(sys.argv[1])
-except:
+else:
     lamer = lamer(input("text ->"))
 
 print(lamer)
